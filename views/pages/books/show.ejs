@@ -1,3 +1,6 @@
+<article>
+  <p>Your bookshelf contains <%= bookArray.length %> books</p>
+</article>
 <% bookArray.forEach(book => { %>
 <article>
   <img src="<%= book.image_url%>" alt="<%= book.title %>">
