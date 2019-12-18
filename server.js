@@ -19,14 +19,22 @@ client.on('error', err => {
 });
 
 function getHome(request, response) {
-  response.render('pages/index');
+  let sql = 'SELECT * FROM books';
+  client.query(sql)
+    .then(results => {
+      let bookshelf = results.rows;
+      console.log(bookshelf);
+      response.render('pages/index', { bookArray: bookshelf });
+    })
+    .catch(error => console.error(error));
 };
 
-// routes
+app.get('/', getHome); // index.ejs
+
+// connect and start server
 client.connect(() => {
   app.listen(PORT, () => {
     console.log(`listening on ${PORT}`);
   });
 });
 
-app.get('/', getHome);
