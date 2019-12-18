@@ -12,6 +12,6 @@ CREATE TABLE books
 );
 
 -- INSERT INTO books
---   (title, author, isbn, image_url, description)
+--   (title, author, isbn, image_url, description, bookshelf)
 -- VALUES
---   ('titletest', 'authortest', 'isbntest', 'imagetest', 'descriptiontest');
+--   ('titletest', 'authortest', 'isbntest', 'imagetest', 'descriptiontest', 'fantasy');
