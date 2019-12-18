@@ -1,0 +1,13 @@
+article, form {
+  animation-name: colorchange;
+  animation-duration: 0.8s;
+}
+
+@keyframes colorchange {
+  from {background-color: black;}
+  to {background-color: rgb(168, 167, 167);}
+}
+
+.book-summary {
+  border: 5px solid rgb(168, 167, 167);
+}

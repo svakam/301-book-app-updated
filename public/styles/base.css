@@ -1,0 +1,51 @@
+* {
+  background-color: rgb(238, 238, 238);
+  font-family: 'Work Sans', sans-serif;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  background-color: gray;
+}
+
+/* results page */
+article {
+  background-color: lightgrey;
+}
+
+h2, h3, h4 {
+  font-weight: bold;
+}
+
+/* form page */
+#indexcaption {
+  text-align: center;
+}
+
+form {
+  background-color: rgb(168, 167, 167);
+}
+
+input {
+  background-color: white;
+}
+
+fieldset, label, span {
+  background-color: rgb(233, 233, 233);
+}
+
+button {
+  background-color: black;
+  color: white;
+}
+
+.indexh4, #indexcaption {
+  background-color: gray;
+}
+
+#indexbox, fieldset, button {
+  border-radius: 5px;
+}

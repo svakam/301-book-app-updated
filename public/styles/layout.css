@@ -1,0 +1,121 @@
+/* results page */
+/* mobile */
+html {
+  width: 480px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-left: 40px solid rgb(168, 167, 167);
+  border-right: 40px solid rgb(168, 167, 167);
+  border-radius: 5px;
+  align-items: center;
+  margin: 40px 10px 40px 10px;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid rgb(233, 233, 233);
+  border-radius: 5px;
+  /* width: 40%; */
+}
+
+h2, h3, h4 {
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+p {
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+  max-height: 325px;
+  overflow: auto;
+}
+
+/* tablet */ 
+@media (min-width: 768px) {
+  html {
+    width: 768px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* desktop */
+@media (min-width: 930px) {
+  html {
+    width: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  article {
+    margin: 40px 30px 40px 30px;
+  }
+}
+
+/* form page */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset, label, button {
+  width: 70%;
+  margin: 15px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form:nth-of-type(1) {
+  text-align: center;
+}
+
+#indexbox {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#indexbox, button {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+}
+
+button {
+  width: 75%;
+  height: 60px;
+}
+
+@media (min-width: 930px) {
+  body {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}

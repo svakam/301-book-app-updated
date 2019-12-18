@@ -18,9 +18,9 @@ client.on('error', err => {
   console.error(err);
 });
 
-app.get('/', (request, response) => {
+function getHome(request, response) {
   response.render('pages/index');
-});
+};
 
 // routes
 client.connect(() => {
@@ -29,3 +29,4 @@ client.connect(() => {
   });
 });
 
+app.get('/', getHome);
