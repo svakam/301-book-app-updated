@@ -13,7 +13,19 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded());
 
+const client = new pg.Client(process.env.DATABASE_URL);
+client.on('error', err => {
+  console.error(err);
+});
+
+app.get('/', (request, response) => {
+  response.render('pages/index');
+});
+
 // routes
-app.listen(PORT, () => {
-  console.log(`listening on ${PORT}`);
-})
+client.connect(() => {
+  app.listen(PORT, () => {
+    console.log(`listening on ${PORT}`);
+  });
+});
+
