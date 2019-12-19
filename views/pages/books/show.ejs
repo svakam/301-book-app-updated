@@ -6,7 +6,6 @@
   <img src="<%= book.image_url%>" alt="<%= book.title %>">
   <h2><%= book.title %></h2>
   <h4><%= book.author %></h4>
-  <p class="book-summary"><%= book.description %></p>
-  <p><%= book.bookshelf %></p>
+  <a href="/edit/<%= book.isbn13 %>">View Details/Edit</a>
 </article>
 <% }) %>
