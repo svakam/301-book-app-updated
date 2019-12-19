@@ -8,10 +8,13 @@ CREATE TABLE books
   isbn VARCHAR(255),
   image_url TEXT,
   description TEXT,
-  bookshelf TEXT
+  bookshelf TEXT,
+  publisher VARCHAR
+  (255),
+  publisheddate VARCHAR
+  (30),
+  pagecount VARCHAR
+  (5),
+  averagerating VARCHAR
+  (5)
 );
-
--- INSERT INTO books
---   (title, author, isbn, image_url, description, bookshelf)
--- VALUES
---   ('titletest', 'authortest', 'isbntest', 'imagetest', 'descriptiontest', 'fantasy');

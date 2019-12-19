@@ -1,1 +1,36 @@
-<!-- detail of each book -->
+<!DOCTYPE html>
+<html>
+<%- include ('../../layout/head') %>
+<%- include ('../../layout/header') %>
+
+<body>
+
+  <article>
+    <img src="<%= book.image_url%>" alt="<%= book.title %>">
+    <h2><%= book.title %></h2>
+    <h4><%= book.author %></h4>
+    <p>Published on: <%= book.publishedDate %></p>
+    <p><%= book.publisher %></p>
+    <p>Average rating: <%= book.averageRating %></p>
+    <p>Pages: <%= book.pageCount %></p>
+    <p class="book-summary"><%= book.description %></p>
+    <p>ISBN13: <%= book.isbn13 %></p>
+    <p>Genre: <%= book.bookshelf %></p>
+  </article>
+  <form action="/add" method="post">
+    <input type="hidden" name="title" value="<%= book.title %>"></input>
+    <input type="hidden" name="author" value="<%= book.author %>"></input>
+    <input type="hidden" name="publisher" value="<%= book.publisher %>"></input>
+    <input type="hidden" name="publisheddate" value="<%= book.publishedDate %>"></input>
+    <input type="hidden" name="description" value="<%= book.description %>"></input>
+    <input type="hidden" name="isbn13" value="<%= book.isbn13 %>"></input>
+    <input type="hidden" name="pagecount" value="<%= book.pageCount %>"></input>
+    <input type="hidden" name="bookshelf" value="<%= book.bookshelf %>"></input>
+    <input type="hidden" name="averagerating" value="<%= book.averageRating %>"></input>
+    <input type="hidden" name="image_url" value="<%= book.image_url%>"></input>
+    <button type="submit">Add to Bookshelf</button>
+  </form>
+
+</body>
+
+</html>
