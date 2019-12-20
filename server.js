@@ -122,8 +122,17 @@ function editDetails(request, response) {
 }
 
 function showEdit(request, response) {
-  console.log(request.params);
-  response.render('pages/edit/:isbn13');
+  // console.log(request.params);
+  // find book in database that matches request.params.isbn13
+  let isbn13 = request.params.isbn13;
+  let sql = "SELECT * FROM books WHERE isbn = $1;";
+  let safeValues = [isbn13];
+  client.query(sql, safeValues)
+    .then(results => {
+      let selectedBook = results.rows[0]
+      console.log(selectedBook)
+      response.render('pages/books/edit', { book: selectedBook });
+    }).catch(error => console.error(error));
 }
 
 app.get('/', getHome); // index.ejs
@@ -131,6 +140,7 @@ app.post('/searches', getBookInfo); // searches/show.ejs
 app.get('/details/:isbn13', getDetails); // pages/books/detail.ejs
 app.post('/edit/:isbn13', editDetails);
 app.get('/edit/:isbn13', showEdit);
+app.post('/add', addBook);
 
 // connect and start server
 client.connect(() => {
