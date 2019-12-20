@@ -5,6 +5,7 @@
 <%- include ('../../layout/header') %>
 
 <body>
+  <a href="/" class="home-button">Home</a>
   <article>
     <img src="<%= book.image_url %>" alt="<%= book.title %>">
     <h2><%= book.title %></h2>
@@ -18,13 +19,15 @@
     <p>Genre: <%= book.bookshelf %></p>
   </article>
   <form action="<%= `/edit/${book.id}` %>" method="post">
-    <input name="title" value="<%= book.title %>" placeholder="<%= book.title %>"></input>
-    <input name="author" value="<%= book.author %>" placeholder="<%= book.author %>"></input>
-    <input name="publisher" value="<%= book.publisher %>" placeholder="<%= book.publisher %>"></input>
-    <input name="publisheddate" value="<%= book.publisheddate %>" placeholder="<%= book.publisheddate %>"> </input>
-    <input name="pagecount" value="<%= book.pagecount %>" placeholder="<%= book.pagecount %>"></input>
-    <input name="bookshelf" value="<%= book.bookshelf %>" placeholder="<%= book.bookshelf%>"></input>
-    <input name="averagerating" value="<%= book.averagerating %>" placeholder="<%= book.averagerating %>"></input>
+    Edit Title: <input name="title" value="<%= book.title %>" placeholder="<%= book.title %>"> <br>
+    Edit Author: <input name="author" value="<%= book.author %>" placeholder="<%= book.author %>"><br>
+    Edit Publisher: <input name="publisher" value="<%= book.publisher %>" placeholder="<%= book.publisher %>"><br>
+    Edit Date Published On: <input name="publisheddate" value="<%= book.publisheddate %>"
+      placeholder="<%= book.publisheddate %>"> <br>
+    Edit Page Count: <input name="pagecount" value="<%= book.pagecount %>" placeholder="<%= book.pagecount %>"><br>
+    Edit Genre: <input name="bookshelf" value="<%= book.bookshelf %>" placeholder="<%= book.bookshelf%>"><br>
+    Edit Rating<input name="averagerating" value="<%= book.averagerating %>"
+      placeholder="<%= book.averagerating %>"><br>
     <input type="hidden" name="_method" value="PUT">
     <button type="submit">Add to Bookshelf</button>
   </form>
