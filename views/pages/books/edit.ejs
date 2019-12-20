@@ -11,7 +11,7 @@
 
 <body>
   <article>
-    <img src="<%= book.image_url%>" alt="<%= book.title %>">
+    <img src="<%= book.image_url %>" alt="<%= book.title %>">
     <h2><%= book.title %></h2>
     <h4><%= book.author %></h4>
     <p>Published on: <%= book.publisheddate %></p>
@@ -22,17 +22,15 @@
     <p>ISBN13: <%= book.isbn %></p>
     <p>Genre: <%= book.bookshelf %></p>
   </article>
-  <form action="<%= `/edit/${book.isbn13}?_method=PUT` %>" method="post">
+  <form action="<%= `/edit/${book.id}` %>" method="post">
     <input name="title" value="<%= book.title %>" placeholder="<%= book.title %>"></input>
     <input name="author" value="<%= book.author %>" placeholder="<%= book.author %>"></input>
     <input name="publisher" value="<%= book.publisher %>" placeholder="<%= book.publisher %>"></input>
     <input name="publisheddate" value="<%= book.publisheddate %>" placeholder="<%= book.publisheddate %>"> </input>
-    <!-- <input name="description" value="<%= book.description %>" placeholder="<%= book.description %>"> </input>
-    <input name="isbn13" value="<%= book.isbn13 %>" placeholder="<%= book.isbn13 %>"></input> -->
     <input name="pagecount" value="<%= book.pagecount %>" placeholder="<%= book.pagecount %>"></input>
     <input name="bookshelf" value="<%= book.bookshelf %>" placeholder="<%= book.bookshelf%>"></input>
     <input name="averagerating" value="<%= book.averagerating %>" placeholder="<%= book.averagerating %>"></input>
-    <!-- <input name="image_url" value="<%= book.image_url%>" placeholder="<%= book.image_url %>"></input> -->
+    <input type="hidden" name="_method" value="PUT">
     <button type="submit">Add to Bookshelf</button>
   </form>
 </body>
