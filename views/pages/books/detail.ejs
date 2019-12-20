@@ -14,7 +14,7 @@
     <p>Average rating: <%= book.averageRating %></p>
     <p>Pages: <%= book.pageCount %></p>
     <p class="book-summary"><%= book.description %></p>
-    <p>ISBN13: <%= book.isbn13 %></p>
+    <p>ISBN13: <%= book.isbn %></p>
     <p>Genre: <%= book.bookshelf %></p>
   </article>
   <form action="/add" method="post">
@@ -23,7 +23,7 @@
     <input type="hidden" name="publisher" value="<%= book.publisher %>"></input>
     <input type="hidden" name="publisheddate" value="<%= book.publishedDate %>"></input>
     <input type="hidden" name="description" value="<%= book.description %>"></input>
-    <input type="hidden" name="isbn13" value="<%= book.isbn13 %>"></input>
+    <input type="hidden" name="isbn" value="<%= book.isbn %>"></input>
     <input type="hidden" name="pagecount" value="<%= book.pageCount %>"></input>
     <input type="hidden" name="bookshelf" value="<%= book.bookshelf %>"></input>
     <input type="hidden" name="averagerating" value="<%= book.averageRating %>"></input>

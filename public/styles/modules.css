@@ -11,3 +11,22 @@ article, form {
 .book-summary {
   border: 5px solid rgb(168, 167, 167);
 }
+
+.home-button {
+  border: 5px solid rgb(238, 238, 238);
+  background-color: rgb(238, 238, 238);
+  width: 100px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+a:link {
+  color:black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: rgb(112, 112, 204);
+}
